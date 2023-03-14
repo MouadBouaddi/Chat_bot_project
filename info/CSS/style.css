@@ -1,0 +1,487 @@
+/*=========================================
+======== GLOBAL STYLES ====================
+=========================================*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  scrollbar-width: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scrollbar-width: none;
+  color: #f2f2fe;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: auto;
+}
+@media screen and (width > 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+.image {
+  width: 30px;
+  aspect-ratio: 1/1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  padding: 1px;
+}
+.image img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+main {
+  margin-top: 50px;
+  padding-top: 20px;
+  background-color: hsl(0deg, 0%, 90%);
+  min-height: calc(100vh - 50px);
+}
+
+.box {
+  position: relative;
+  padding: 6px 15px;
+  max-width: min(70%, 500px);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  font-weight: 300;
+  background-color: hsl(0deg, 0%, 20%);
+  color: #f2f2fe;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: -8px;
+  background-color: hsl(0deg, 0%, 90%);
+  width: 15px;
+  aspect-ratio: 1/1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid hsl(0deg, 0%, 20%);
+}
+
+.error-box {
+  position: fixed;
+  bottom: 7rem;
+  right: 0;
+  padding: 7px 10px;
+  -webkit-border-radius: 7px 0 0 7px;
+  -moz-border-radius: 7px 0 0 7px;
+  border-radius: 7px 0 0 7px;
+  background-color: #fff;
+  color: #da0f3f;
+  overflow: hidden;
+  -webkit-animation: enter-animate 0.5s;
+  -moz-animation: enter-animate 0.5s;
+  animation: enter-animate 0.5s;
+  cursor: pointer;
+}
+.error-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #da0f3f;
+}
+
+button a {
+  display: block;
+  padding: 7px 14px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: hsl(236deg, 100%, 50%);
+  color: #f2f2fe;
+  font-weight: 400;
+}
+
+/*=========================================
+======== NAV STYLES =======================
+=========================================*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  background: hsl(0deg, 0%, 20%);
+  text-transform: capitalize;
+  box-shadow: 0 3px 10px #222;
+}
+nav a {
+  color: #f2f2fe;
+}
+nav .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+nav .logo .title {
+  font-size: 1.2rem;
+}
+nav .navbar-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: fit-content;
+  cursor: pointer;
+}
+nav .navbar-button span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #f2f2fe;
+}
+nav .navbar {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background-color: hsl(0deg, 0%, 20%);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  display: none;
+}
+nav .navbar .close-navbar {
+  padding: 10px;
+}
+nav .navbar .close-navbar svg {
+  display: block;
+  margin-inline: auto 5px;
+  cursor: pointer;
+}
+nav .navbar a {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid rgba(242, 242, 254, 0.1);
+  transition: 0.3s ease;
+}
+nav .navbar a:hover {
+  background-color: #595959;
+}
+
+/*=========================================
+======== MAIN PAGE STYLES =================
+=========================================*/
+main.mainPage {
+  padding-top: 20px;
+}
+main.mainPage .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main.mainPage .image {
+  width: 100px;
+  padding: 2px;
+  background: hsl(0deg, 0%, 20%);
+  margin-left: auto;
+}
+main.mainPage .messages {
+  padding-bottom: 0;
+}
+main.mainPage .buttons {
+  display: block;
+}
+main.mainPage .buttons button {
+  margin-left: auto;
+  display: block;
+  margin-block: 7px;
+}
+
+/*==========================================
+======== MESSAGES SECTION STYLES ===========
+==========================================*/
+main .user-message, main .bot-message {
+  width: fit-content;
+  max-width: min(70%, 500px);
+  position: relative;
+}
+main .user-message p, main .bot-message p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+
+main .messages {
+  padding-bottom: 65px;
+}
+main .messages .box:not(:first-child) {
+  margin-top: 10px;
+}
+main .messages .box:not(:last-child) {
+  margin-bottom: 10px;
+}
+main .messages .box small {
+  display: block;
+  font-size: 12px;
+  color: hsla(0deg, 0%, 100%, 0.7);
+}
+main .bot-message {
+  margin-left: auto;
+}
+main .bot-message::before {
+  border-color: hsl(0deg, 0%, 20%);
+}
+main .bot-message.error {
+  background-color: rgba(218, 15, 63, 0.4);
+  color: #da0f3f;
+}
+main .bot-message.error::before {
+  border-color: #da0f3f;
+}
+main .user-message {
+  background-color: hsl(156deg, 100%, 20%);
+}
+main .user-message::before {
+  left: -4px;
+  border-color: hsl(156deg, 100%, 20%);
+}
+
+/*==========================================
+======== GLOBAL FORM SECTION STYLES ========
+==========================================*/
+form {
+  padding-block: 10px;
+  width: calc(100% - 20px);
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+form .form-controller {
+  position: relative;
+  width: 100%;
+}
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 10px 10px 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(0deg, 0%, 20%);
+  color: #f2f2fe;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+  caret-shape: bar;
+}
+form svg {
+  position: absolute;
+  left: 13px;
+  color: rgba(242, 242, 254, 0.6);
+}
+form button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #111;
+  color: #f2f2fe;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+form button:hover {
+  background-color: hsl(236deg, 100%, 50%);
+  color: #f2f2fe;
+}
+
+/*==========================================
+======== SEND FORM SECTION STYLES ==========
+==========================================*/
+.send-form {
+  position: fixed;
+  width: 95%;
+  max-width: 100%;
+  padding-block: 10px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+}
+@media (width > 700px) {
+  .send-form {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+  }
+}
+.send-form .form-controller input {
+  padding: 10px 100px 10px 40px;
+  width: 100%;
+}
+.send-form .form-controller svg {
+  top: 50%;
+  translate: 0 -50%;
+}
+.send-form button {
+  position: absolute;
+  right: 7px;
+}
+
+/*==========================================
+======== GIVE INFO FORM SECTION STYLES =====
+==========================================*/
+.giveInfo-form {
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.giveInfo-form textarea {
+  height: 170px;
+}
+.giveInfo-form svg {
+  top: 11px;
+}
+.giveInfo-form button {
+  padding: 7px 20px;
+}
+
+/*==========================================
+======== LOGIN PAGE STYLES =================
+==========================================*/
+h2.title {
+  margin: auto auto -1rem;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #000;
+}
+
+main.loginPage {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  background-color: #151515;
+}
+main.loginPage .container {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+}
+main.loginPage form {
+  margin: 50px auto;
+}
+main.loginPage form button {
+  background-color: #f2f2fe;
+  color: #151515;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+main.loginPage form button:hover {
+  background-color: hsl(236deg, 100%, 50%);
+  color: #f2f2fe;
+}
+main.loginPage form small {
+  margin-left: 10px;
+}
+main.loginPage form small a {
+  color: hsl(236deg, 100%, 50%);
+  transition: 0.3s ease;
+}
+main.loginPage form small a:hover {
+  color: hsl(236deg, 100%, 62%);
+}
+
+/*==========================================
+======== ANSWER PAGE STYLES ================
+==========================================*/
+main .question-message {
+  display: block;
+  background-color: hsl(236deg, 100%, 30%);
+}
+main .question-message.box:not(:first-child) {
+  margin-top: 15px;
+}
+main .question-message::before {
+  content: "?";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -5px;
+  top: -10px;
+  border-color: hsl(236deg, 100%, 30%);
+  color: hsl(236deg, 100%, 30%);
+}
+
+/*==========================================
+======== ANIMATIONS ========================
+==========================================*/
+@-webkit-keyframes enter-animate {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-moz-keyframes enter-animate {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes enter-animate {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}

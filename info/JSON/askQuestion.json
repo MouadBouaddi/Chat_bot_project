@@ -1,0 +1,32 @@
+[
+    {
+      "message": "Eum veniam vero voluptatem, esse molestiae",
+      "author": 0,
+      "date": "2023-12-23"
+    },
+    {
+      "message": "Lorem ipsum",
+      "author": 1,
+      "date": "2023-12-23"
+    },
+    {
+      "message": "dolor sit amet consectetur",
+      "author": 1,
+      "date": "2023-12-23"
+    },
+    {
+      "message": "temporibus praesentium officiis quisquamdeleniti pariatur illumLorem ipsum dolor sit amet consectetur ",
+      "author": 0,
+      "date": "2023-12-23"
+    },
+    {
+      "message": "pariatur illumLorem ipsum dolor ",
+      "author": 0,
+      "date": "2023-12-23"
+    },
+    {
+      "message": "Lorem ipsum dolor sit amet.",
+      "author": 1,
+      "date": "2023-12-23"
+    }
+]
