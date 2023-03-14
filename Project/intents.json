@@ -1,0 +1,103 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?","are you there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hi there.<br>I'm having a great day so far! I like to feel useful, tell me what I can do for you."],
+         "context_set": ""
+        },
+        {"tag": "robot",
+         "patterns": ["Are you a robot", "robot?", "Is there any robot there?"],
+         "responses": ["Yeah!<br>And I'm here to help...", "Yup!", "Yeah, a robot is over here!"],
+         "context_set": ""
+        },
+        {"tag": "human",
+         "patterns": ["Are you a human", "human?", "Is there any human there?"],
+         "responses": ["Nah!<br>I'm a robot here to help...", "No! I'm only a robot", "Humans created me but I'm a robot!"],
+         "context_set": ""
+        },
+        {"tag": "author",
+         "patterns": ["Who has created you?", "Who made you?", "Did someone created you?"],
+         "responses": ["Yup, Mmm...<br>I was created by BOUADDI Mouad and BOUSALIH Hamza for University Project.", "Mouad and Hamza did!", "Thanks to Mouad and Hamza, I'm here!"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is Helper", "what is your age", "how old are you", "age?"],
+         "responses": ["I have no age but I was created in March,2023", "I only lived for 1 month, How can I help you?"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["Sorry, I'm not humnan so I have no name. but if you want you can call me Helper", "You can call me Helper."],
+         "context_set": ""
+        },
+        {"tag": "job",
+         "patterns": ["I want to know what is your job", "what do you do for living", "do you have a job?", "can you explain about your work?", "what is your job?"],
+         "responses": ["I'm a robot Chatbot, I serve you so tell me how can I help?", "My job is helping people :)", "I'm here to help you, What do you want me to do?"],
+         "context_set": ""
+        },
+        {"tag": "JAVA ORIENTED OBJECT PROGRAMMING",
+         "patterns": ["Java", "oriented", "object", "programming","JAVA ORIENTED OBJECT PROGRAMMING", "What is JAVA ORIENTED OBJECT PROGRAMMING?","What is Java?","JOO"],
+         "responses": ["reification, encapsulation, inheritance, polymorphism. The implementation of these concepts will be done in Java. This module will allow students to master the object approach to be operational in software development based on Java."],
+         "context_set": ""
+        },
+        {"tag": "OPERATING SYSTEM",
+         "patterns": ["OPERATING", "SYSTEM", "Windows", "linux","Shell", "What do students study at OPERATING SYSTEM","What is Linux?","Computer systems"],
+         "responses": ["The operating system offers a suite of general services that facilitate the creation of application software. The services offered are related to the use of computer resources by the programs. In particular, they make it possible to execute programs, read and write information, manipulate files, communicate between computers and detect errors. These services allow multiple users and multiple programs to share computer resources. This course will allow students to Master the principles and role of operating systems - Use operating systems with high professional exploitation. Its objective is mainly oriented towards users of LINUX and Windows Server who develop and design Information Systems under these systems."],
+         "context_set": ""
+        },
+        {"tag": "UML AND AGILE METHODS",
+         "patterns": ["uml", "agile", "methods", "diagrams","class diagram", "What is UML AND AGILE METHODS?","What is UML?","Sequence"],
+         "responses": ["course allows students to master and acquire all the techniques of analysis and design by object used in the context of information systems: This course is particularly aimed at learning the concepts of the object approach and formalism UML - Realization of case study: elaboration of specification, preliminary and detailed design file from a specification. Agile methods are an innovative movement in the software industry, which is changing the nature of the client-supplier relationship, and the functioning of the development team. The objective is to acquire knowledge on the principles and techniques related to this movement."],
+         "context_set": ""
+        },
+        {"tag": "SGBD / SGBDR",
+         "patterns": ["SGBD", "SGBDR", "Data Base", "Advanced Data Base","SGBD / SGBDR", "What is SGBD / SGBDR?","What is SGBD?","What do students study at SGBD / SGBDR"],
+         "responses": ["The objective of the course is to quickly take stock of the evolution of database management systems. It aims to study relational databases in particular. These notions are illustrated by relational algebra, relational normalization and practical work in SQL language under Oracle and SQL Server."],
+         "context_set": ""
+        },
+        {"tag": "COMPUTER NETWORKS",
+         "patterns": ["COMPUTER", "NETWORKS", "Internet", "WLAN","COMPUTER NETWORKS", "What is COMPUTER NETWORKS?","What is networks?","Computer connecting"],
+         "responses": ["Make students aware of the basic notions of networks, standardization, the various connection elements, addressing, IP routing and computer equipment management"],
+         "context_set": ""
+        },
+        {"tag": "DISTRIBUTED DATABASES",
+         "patterns": ["DISTRIBUTED", "DATABASES", "Fragmentaion", "Data saving","DISTRIBUTED DATABASES", "What is DISTRIBUTED DATABASES?","What do students study at DISTRIBUTED DATABASES?","DDB"],
+         "responses": ["The objective of this module is to deepen the knowledge of the students in the field of databases and especially on the distributed and parallel aspects. This course covers both design methodologies and the most recent techniques implemented in DBMS kernels."],
+         "context_set": ""
+        },
+        {"tag": "HMI",
+         "patterns": ["HMI", "Human", "Machine", "interface","Human Machine Interface", "What is HMI?","What is Human Machine Interface?","Java interface"],
+         "responses": ["human-computer interaction, the basic principles of interface design as well as the design and implementation of graphical interfaces. The course uses java awt and swing as development tools."],
+         "context_set": ""
+        },
+        {"tag": "WEB PROGRAMMING",
+         "patterns": ["web", "HTML", "CSS", "programming","WEB PROGRAMMING", "What is WEB PROGRAMMING?","What do students study at WEB PROGRAMMING?","PHP"],
+         "responses": ["1. Introduce students to client/web server architectures and development tools for the web server<br>2. Study a customer-oriented language with interaction with databases.<br>3. Study development tools for the web server. It is about studying a language server-oriented (ex. PHP) with interaction with databases (ex. MySQL)<br>4. This background will be used by students to practice and master the development of static or dynamic websites.<br>5. Introduce students to the notions of JQuery and Ajax."],
+         "context_set": ""
+        },
+        {"tag": "C language Relational databases",
+         "patterns": ["C", "Language", "Relational", "databases","C language Relational databases", "What is C language Relational databases?","What do students study at C language Relational databases?","CLRD"],
+         "responses": ["The distributed architecture offers methods and tools to simplify the development of client/server network applications, by trying to abstract itself from the remote aspect, making it possible to offer natural programming 'For heavy applications': the aim of the course is to initiate students to master and practice the breakdown of applications and to rationalize the distribution of services to limit the exchange of information."],
+         "context_set": ""
+        },
+        {"tag": "PROJECT GRADUATION",
+         "patterns": ["PROJECT", "GRADUATION", "Internship", "Finishing Studying","PROJECT GRADUATION", "What is PROJECT GRADUATION?","What do students do in PROJECT GRADUATION?","Having internship"],
+         "responses": ["The End of Study Project will allow students to prepare for their entry into working life, to apply their computer knowledge acquired during training, to industrial, economic, social or management problems."],
+         "context_set": ""
+        },
+        {"tag": "Distributed computer systems",
+         "patterns": ["Distributed computer systems", "Computer Science", "SIR", "What is the meaning of SIR","Having a degree at Distributed computer systems", "What is Distributed computer systems?","What do students do in Distributed computer systems?","Study Distributed computer systems"],
+         "responses": ["The Distributed Computing Systems license (SIR) was designed following the reflection that was carried out by the council of our establishment on the role that computing can play in our society, on the interest that new techniques can present of training and on our role according to our skills and the changes that our society is experiencing. For us, it is a question, first of all, of giving to data processing, in our society, the place that it really occupies in the modern world and, then, of integrating new training techniques to produce skills capable of to meet a growing and diversified demand. Information technology is undergoing profound changes and, almost everywhere in the world."],
+         "context_set": ""
+        },
+        {"tag": "Modules",
+         "patterns": ["All modules", "All SIR modules", "Studying program", "What do students study at SIR","tell me all the modules of Distributed computer systems"],
+         "responses": ["Students study the following modules:<br>1) JAVA ORIENTED OBJECT PROGRAMMING<br>2) OPERATING SYSTEM<br>3) UML AND AGILE METHODS<br>4) SGBD / SGBDR<br>5) COMPUTER NETWORKS<br>6) DISTRIBUTED DATABASES<br>7) HMI<br>8) WEB PROGRAMMING<br>9) C language Relational databases<br>10) PROJECT GRADUATION"],
+         "context_set": ""
+        }
+   ]
+}
